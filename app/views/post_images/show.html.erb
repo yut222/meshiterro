@@ -6,7 +6,9 @@
   <p>ユーザーネーム：<%= @post_image.user.name%></p>
   <p>投稿日：<%= @post_image.created_at.strftime('%Y/%m/%d') %></p> <!-- %Y/%m/%d 年/月/日 -->
 
+<!-- 削除ボタンの作成 -->
   <% if @post_image.user == current_user %>  <!-- もし 投稿者 == 現在ログインしているユーザーだったら -->
     <%= link_to "削除", post_image_path(@post_image), method: :delete %>  <!-- 削除ボタン -->
   <% end %>  <!-- 終了 -->
+
 </div>
