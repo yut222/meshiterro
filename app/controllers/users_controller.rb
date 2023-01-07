@@ -5,5 +5,6 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = 
   end
 end
