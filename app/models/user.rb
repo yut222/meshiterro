@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :post_images, dependent: :destroy
+  has_many :post_comments, dependent: :destroy
   
   # ユーザーごとのプロフ画像を(保存)扱うため追記
   has_one_attached :profile_image  #profile_image という名前でActiveStorageでプロフ画像を保存できる設定
