@@ -1,7 +1,6 @@
-<!-- ユーザーの投稿一覧 -->
 <!-- 共通化テンプレート -->
-
 <% @post_images.each do |post_image| %>
+<!-- @post_images => post_images に変更 -->
 <div>
   <%= link_to post_image_path(post_image.id) do %>  <!-- showページのリンク -->
     <%= image_tag post_image.get_image %>  <!-- 上のlink_toではdoからendまでの間、つまりimage_tagはaタグで囲まれた状態になる.post_image.get_imageはPstImageモデル内に記述したメソッドを呼び出す -->
